@@ -29,30 +29,30 @@ class MainKtTest {
         assertEquals(Unit, result)
     }
 
-//    @Test
-//    fun commissionPay_test_Mastercard() {
-//
-//        //arrange
-//        val testMastercardCardType = "Mastercard"
-//        val testMastercardLimitInMonth = 7_400_000
-//        val testMastercardAmount = 2000
-//
-//        val limitInMonthMastercardMaestro = 7_500_000 //максимальная сумма перевода в месяц в копейках Mastercard/Maestro
-//        val noCommissionMastercardMaestro = testMastercardAmount * 0 // комиссия 0% от суммы перевода до 7_500_000 Mastercard/Maestro
-//        val commissionPercentageMastercardMaestro = testMastercardAmount / 1_000 * 6 //комиссия 0.6% от суммы перевода Mastercard/Maestro
-//        val commissionMinMastercardMaestro = 2_000 // минмальная комиссия 20 рублей = 2000 коп  Mastercard/Maestro
-//        val commissionMastercardMaestro = commissionPercentageMastercardMaestro+commissionMinMastercardMaestro //комиссия 0.6% + 20 рублей Mastercard/Maestro
-//
-//        //act
-//        val result = commissionPay(
-//            cardType = testMastercardCardType,
-//            limitInMonth = testMastercardLimitInMonth,
-//            amount = testMastercardAmount
-//        )
-//
-//        //assert
-//        assertEquals(0, result)
-//    }
+    @Test
+    fun commissionPay_test_Mastercard() {
+
+        //arrange
+        val testMastercardCardType = "Mastercard"
+        val testMastercardLimitInMonth = 7_400_000
+        val testMastercardAmount = 2000
+
+        val limitInMonthMastercardMaestro = 7_500_000 //максимальная сумма перевода в месяц в копейках Mastercard/Maestro
+        val noCommissionMastercardMaestro = testMastercardAmount * 0 // комиссия 0% от суммы перевода до 7_500_000 Mastercard/Maestro
+        val commissionPercentageMastercardMaestro = testMastercardAmount / 1_000 * 6 //комиссия 0.6% от суммы перевода Mastercard/Maestro
+        val commissionMinMastercardMaestro = 2_000 // минмальная комиссия 20 рублей = 2000 коп  Mastercard/Maestro
+        val commissionMastercardMaestro = commissionPercentageMastercardMaestro+commissionMinMastercardMaestro //комиссия 0.6% + 20 рублей Mastercard/Maestro
+
+        //act
+        val result = commissionPay(
+            cardType = testMastercardCardType,
+            limitInMonth = testMastercardLimitInMonth,
+            amount = testMastercardAmount
+        )
+
+        //assert
+        assertEquals(Unit, result)
+    }
 
     @Test
     fun main_test() {
@@ -69,6 +69,6 @@ class MainKtTest {
         )
 
         //assert
-        assertEquals(51920, result)
+        assertEquals(Unit, result)
     }
 }
